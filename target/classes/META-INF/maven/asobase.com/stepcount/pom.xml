@@ -24,14 +24,22 @@
 		      </manifest>
 		    </archive>
 		  </configuration>
-	    </plugin>
-	    <plugin>
-	      <groupId>org.apache.maven.plugins</groupId>
-	      <artifactId>maven-assembly-plugin</artifactId>
-	      <configuration>
-	        <descriptorRef>jar-with-dependencies</descriptorRef>
-	      </configuration>
-	    </plugin>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-assembly-plugin</artifactId>
+			<executions>
+			  <execution>
+			    <phase>package</phase>
+			    <goals>
+			      <goal>single</goal>
+			    </goals>
+			  </execution>
+			</executions>
+			<configuration>
+			  <descriptorRef>jar-with-dependencies</descriptorRef>
+			</configuration>
+		</plugin>
 	  </plugins>
     </pluginManagement>
   </build>

@@ -17,5 +17,6 @@ public class StepCount {
 		cmd.addArgument(">"+basedir+"\\files.txt");
 		Executor exec=new DefaultExecutor();
 		exec.execute(cmd);
+		System.out.println("process completion!");
 	}
 }
